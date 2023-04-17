@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="in" id="home" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/all.css">
+  <title>My Portfolio</title>
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>
+<body>
+  <!-- Header Start -->
+  <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+    <div class="container">
+      <div class="flex items-center justify-between relative">
+        <div class="px-4 py-5">
+          <a href="#home" class="w-7 h-7 flex justify-center items-center bg-primary text-white text-base rounded-full hover:bg-white hover:text-primary transition duration-300 lg:text-xl lg:w-10 lg:h-10 dark:hover:bg-transparent">
+            <i class="fa fa-user"></i>
+          </a>
+        </div>
+        <div class="flex items-center px-4">
+          <button id="menu" name="menu" type="button" class="block absolute right-4 lg:hidden">
+            <span class="menu-line transition duration-300 ease-in-out origin-top-left"></span>
+            <span class="menu-line transition duration-300 ease-in-out"></span>
+            <span class="menu-line transition duration-300 ease-in-out origin-bottom-left"></span>
+          </button>
+          <nav id="nav-list" class="hidden absolute p-3 bg-white shadow-lg rounded-lg max-w-[200px] w-full right-4 top-full transition durasi-400 lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-700 dark:lg:bg-transparent">
+            <ul class="block lg:flex">
+              <li class="group transition durasi-400 hover:bg-primary px-2 rounded-lg">
+                <a href="#home" class="text-sm text-dark py-2 group-hover:text-white flex lg:text-lg dark:text-white">Beranda</a>
+              </li>
+              <li class="group transition durasi-400 hover:bg-primary px-2 rounded-lg">
+                <a href="#about" class="text-sm text-dark py-2 group-hover:text-white flex lg:text-lg dark:text-white">Tentang Saya</a>
+              </li>
+              <li class="group transition durasi-400 hover:bg-primary px-2 rounded-lg">
+                <a href="#portfolio" class="text-sm text-dark py-2 group-hover:text-white flex lg:text-lg dark:text-white">Portfolio</a>
+              </li>
+              <li class="group transition durasi-400 hover:bg-primary px-2 rounded-lg">
+                <a href="#blog" class="text-sm text-dark py-2 group-hover:text-white flex lg:text-lg dark:text-white">Blog</a>
+              </li>
+              <li class="group transition durasi-400 hover:bg-primary px-2 rounded-lg">
+                <a href="#kontak" class="text-sm text-dark py-2 group-hover:text-white flex lg:text-lg dark:text-white">Kontak</a>
+              </li>
+              <li class="flex items-center mt-4 lg:mt-0 lg:pl-4">
+                <div class="flex items-center">
+                  <span class="far fa-sun text-slate-400"></span>
+                  <input type="checkbox" id="toggle" class="hidden">
+                  <label for="toggle" class="mx-2">
+                    <div class="w-9 h-5 bg-slate-400 rounded-full p-1 flex items-center">
+                      <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+                    </div>
+                  </label>
+                  <span class="far fa-moon text-slate-400"></span>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+  
+  <!-- Hero Start -->
+  <section class="pt-32 dark:bg-dark">
+    <div class="container">
+      <div class="flex flex-wrap">
+        <div class="w-full self-center px-4 lg:w-1/2">
+          <h3 class="text-base text-primary font-semibold lg:text-xl">Selamat Datang Di Website✋ <span class="block text-3xl font-bold text-dark lg:text-5xl lg:mt-1 dark:text-white">Dwi Jhanuar</span></h3>
+          <h4 class="text-sm text-secondary font-light mb-2 lg:text-lg lg:mb-6">Web Development | Pengusaha</h4>
+          <p class="text-base text-dark leading-6 tracking-wide mb-4 lg:text-lg lg:mb-6 dark:text-secondary">Hai, Bagaimana websitenya? biasa aja lah y😅. semoga bisa jadi refrensi kalian.</p>
+          <a href="#kontak" class="py-2 px-3 bg-primary text-white shadow-lg rounded-lg hover:bg-sky-600 lg:py-3 lg:px-5 lg:text-lg">Hubungi Saya</a>
+        </div>
+        <div class="w-full self-end pt-24 px-10 lg:w-1/2">
+          <img src="src/img/dj.jpg" alt="dj" class="max-w-full rounded-full shadow-lg">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero End -->
+  
+  <!-- About Start -->
+  <section id="about" class="pt-32 dark:bg-dark">
+    <div class="container">
+      <div class="flex flex-wrap">
+        <div class="w-full px-4 max-w-lg lg:w-1/2">
+          <h3 class="text-base uppercase text-primary font-semibold lg:text-lg">Tentang Saya</h3>
+          <h2 class="text-2xl text-dark font-bold mb-2 lg:text-4xl dark:text-white">Tak Kenal Maka Tak Sayang</h2>
+          <p class="text-base text-dark mb-6 tracking-wide dark:text-secondary">Kelahiran indramayu, dibesarkan di bekasi dan sekrang menetap di tempat kelahiran. hobi saya futsal, impian menjadi seorang programmer.</p>
+        </div>
+        <div class="w-full px-4 max-w-lg pb-10 lg:pb-16 lg:w-1/2 lg:pt-[26px]">
+          <h2 class="text-dark text-2xl font-bold mb-2 lg:text-4xl dark:text-white">Follow Me</h2>
+          <p class="text-base text-dark mb-6 tracking-wide dark:text-secondary">Yuk follow saya untuk mendapatkan informasi terkait dunia it.</p>
+          <div class="flex">
+            <a href="https://facebok.com/dwijhanuar" target="_blank" class="w-8 h-8 bg-slate-300 flex justify-center items-center rounded-full text-white group hover:bg-primary transition duration-300 mr-4">
+              <i class="text-lg fa-brands fa-facebook"></i>
+            </a>
+            
+            <a href="https://wa.me/6289660882061" target="_blank" class="w-8 h-8 bg-slate-300 flex justify-center items-center rounded-full text-white group hover:bg-green-500 transition duration-300 mr-4">
+              <i class="text-lg fa-brands fa-whatsapp"></i>
+            </a>
+            
+            <a href="https://instagram.com/dwijhanuar02" target="_blank" class="w-8 h-8 bg-slate-300 flex justify-center items-center rounded-full text-white group hover:bg-pink-500 transition duration-300 mr-4">
+              <i class="text-lg fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About End -->
+  
+  <!-- Project Start-->
+  <section id="portfolio" class="pt-32 bg-slate-100 xl:w-10/12 xl:mx-auto dark:bg-slate-800">
+    <div class="container">
+      <div class="w-full px-4 pb-8">
+        <div class="max-w-xl mx-auto text-center mb-2">
+          <h4 class="text-primary font-semibold text-lg md:text-xl">Portfolio</h4>
+          <h2 class="text-2xl text-dark font-bold mb-4 lg:text-4xl dark:text-white">Project Terbaru</h2>
+          <p class="font-medium text-secondary">Beberapa project yang saya telah buat semasa belajar bahasa pemrograman.</p>
+        </div>
+      </div>
+      <div class="w-full px-4 flex flex-wrap justify-center">
+        <div class="mb-6 p-4 md:w-1/2">
+          <div class="rounded-md shadow-md overflow-hidden dark:shadow-slate-700">
+            <img src="src/img/portfolio/p1.jpg" alt="" class="w-full">
+          </div>
+          <h3 class="mt-4 text-dark font-semibold text-xl dark:text-white">CRUD Codeigniter</h3>
+          <p class="font-medium text-base text-secondary">Aplikasi CRUD sederhana, dengan menggunakan framework <a href="https://codeigniter.com" target="_blank" class="underline text-orange-500">codeigniter</a>.</p>
+        </div>
+        <div class="mb-12 p-4 md:w-1/2">
+          <div class="rounded-md shadow-md overflow-hidden dark:shadow-slate-700">
+            <img src="src/img/portfolio/empty.jpg" alt="" class="w-full">
+          </div>
+          <h3 class="mt-4 text-dark font-semibold text-xl dark:text-white">Nama Project</h3>
+          <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, ex?</p>
+        </div>
+        <div class="mb-12 p-4 md:w-1/2">
+          <div class="rounded-md shadow-md overflow-hidden dark:shadow-slate-700">
+            <img src="src/img/portfolio/empty.jpg" alt="" class="w-full">
+          </div>
+          <h3 class="mt-4 text-dark font-semibold text-xl dark:text-white">Nama Project</h3>
+          <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, ex?</p>
+        </div>
+        <div class="mb-12 p-4 md:w-1/2">
+          <div class="rounded-md shadow-md overflow-hidden dark:shadow-slate-700">
+            <img src="src/img/portfolio/empty.jpg" alt="" class="w-full">
+          </div>
+          <h3 class="mt-4 text-dark font-semibold text-xl dark:text-white">Nama Project</h3>
+          <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, ex?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Project End-->
+  
+  <!-- Blog Start -->
+  <section id="blog" class="pt-32 pb-28 dark:bg-dark">
+    <div class="container">
+      <div class="w-full px-4 pb-8">
+        <div class="max-w-xl mx-auto text-center mb-2">
+          <h4 class="text-primary font-semibold text-lg md:text-xl">Blog</h4>
+          <h2 class="text-2xl text-dark font-bold mb-4 lg:text-4xl dark:text-white">Tulisan Terkini</h2>
+        <p class="font-medium text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, et, natus! Consequatur doloremque, repudiandae animi.</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center">
+        <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+          <div class="bg-slate-100 rounded-lg shadow-md overflow-hidden mb-8 dark:bg-slate-800">
+            <img src="src/img/blog/c2.jpg" alt="" class="w-full">
+            <div class="py-8 px-4">
+              <h4 class="text-xl text-dark font-semibold mb-2 dark:text-white">Rekomendasi Laptop</h4>
+              <p class="text-base font-medium text-secondary mb-6">Beberapa rekomendasi laptop untuk anda yang ingin belajar progamming dengan spesifikasi terbaik.</p>
+              <a href="https://carisinyal.com/laptop-untuk-programer/" target="_blank" class="bg-primary text-white py-3 px-5 rounded-lg shadow-lg hover:bg-sky-600 transition dark:shadow-slate-700">Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+          <div class="bg-slate-100 rounded-lg shadow-md overflow-hidden mb-8 dark:bg-slate-800">
+            <img src="src/img/blog/progamming.jpg" alt="" class="w-full">
+            <div class="py-8 px-4">
+              <h4 class="text-xl text-dark font-semibold mb-2 dark:text-white">Tips Belajar progamming</h4>
+              <p class="text-base font-medium text-secondary mb-6">Disini kita dikasih tau bagaimana cara mempelajari bahasa pemrograman secara otodidak.</p>
+              <a href="https://www.dicoding.com/blog/belajar-programming-secara-otodidak/" target="_blank" class="bg-primary text-white py-3 px-5 rounded-lg shadow-lg hover:bg-sky-600 transition dark:shadow-slate-700">Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+          <div class="bg-slate-100 rounded-lg shadow-md overflow-hidden mb-8 dark:bg-slate-800">
+            <img src="src/img/blog/travel.jpg" alt="" class="w-full">
+            <div class="py-8 px-4">
+              <h4 class="text-xl text-dark font-semibold mb-2 dark:text-white">Travel Bloger Indonesia</h4>
+              <p class="text-base font-medium text-secondary mb-6">Beberapa travel bloger indonesia inspiratif untuk anda.</p>
+              <a href="https://www.niagahoster.co.id/blog/travel-blogger-indonesia/" target="_blank" class="bg-primary text-white py-3 px-5 rounded-lg shadow-lg hover:bg-sky-600 transition dark:shadow-slate-700">Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Blog Start -->
+  
+  <!-- Contact Start -->
+  <section id="kontak" class="pt-24 pb-20 bg-slate-100 dark:bg-slate-800">
+    <div class="container">
+      <div class="w-full px-4 pb-8">
+        <div class="max-w-xl mx-auto text-center mb-2">
+          <h4 class="text-primary font-semibold text-lg md:text-xl">Kontak</h4>
+          <h2 class="text-2xl text-dark font-bold mb-4 lg:text-4xl dark:text-white">Hubungi Saya</h2>
+          <p class="font-medium text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique culpa possimus.</p>
+        </div>
+      </div>
+      
+      <form>
+        <div class="w-full lg:w-2/3 lg:mx-auto">
+          <div class="w-full px-4 pb-6">
+            <label for="name" class="text-base text-primary font-semibold mb-4 lg:text-lg lg:mb-6">Nama</label>
+            <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-white text-dark font-medium rounded-md shadow-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary lg:p-4 dark:bg-dark dark:text-white" placeholder="Masukan nama..." autocomplete="off">
+          </div>
+          <div class="w-full px-4 pb-6">
+            <label for="email" class="text-base text-primary font-semibold mb-4 lg:text-lg lg:mb-6">Email</label>
+            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-white text-dark font-medium rounded-md shadow-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary lg:p-4 dark:bg-dark dark:text-white" placeholder="Masukan email..." autocomplete="off">
+          </div>
+          <div class="w-full px-4 pb-6">
+            <label for="email" class="text-base text-primary font-semibold mb-4 lg:text-lg lg:mb-6">Subject</label>
+            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-white text-dark font-medium rounded-md shadow-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary lg:p-4 dark:bg-dark dark:text-white" placeholder="Masukan subject..." autocomplete="off">
+          </div>
+          <div class="w-full px-4 pb-4">
+            <label for="email" class="text-base text-primary font-semibold mb-4 lg:text-lg lg:mb-6">Pesan</label>
+            <textarea id="email" class="w-full px-4 py-3 bg-white text-dark font-medium rounded-md shadow-md h-32 focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary lg:p-4 dark:bg-dark dark:text-white" placeholder="Pesan..."></textarea>
+          </div>
+          <div class="w-full px-4 pb-6">
+            <button type="submit" class="py-2 px-5 bg-primary rounded-xl shadow-md text-base text-white hover:bg-sky-600 transition duration-400 lg:text-lg lg:py-3 lg px-6">Kirim</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- Contact End -->
+  
+  <!-- Footer Start -->
+  <footer class="bg-dark w-full text-slate-100 pt-16 pb-10">
+    <div class="container">
+      <div class="flex flex-wrap">
+        <div class="w-full px-4 pb-10 md:w-1/2">
+          <h2 class="text-xl font-semibold mb-2">Jhanuar</h2>
+          <p class="text-base font-medium">jln K.A kertasemaya blok kembang</p>
+          <p class="text-base font-medium">Indramayu</p>
+        </div>
+        <div class="w-full px-4 pb-10 md:w-1/2">
+          <h2 class="text-xl font-semibold mb-2">Kategori</h2>
+          <ul class="block lg:flex">
+            <li class="mb-1 mr-2">
+              <a href="#home" class="text-base font-semibold underline hover:text-primary transition">Beranda</a>
+            </li>
+            <li class="mb-1 mr-2">
+              <a href="#about" class="text-base font-semibold underline hover:text-primary transition">Tentang saya</a>
+            </li>
+            <li class="mb-1 mr-2">
+              <a href="#portfolio" class="text-base font-semibold underline hover:text-primary transition">Portfolio</a>
+            </li>
+            <li class="mb-1 mr-2">
+              <a href="#blog" class="text-base font-semibold underline hover:text-primary transition">Blogs</a>
+            </li>
+            <li class="mb-1 mr-2">
+              <a href="#kontak" class="text-base font-semibold underline hover:text-primary transition">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="w-full border-t border-slate-200">
+        <div class="flex justify-center items-center pt-10">
+            <a href="https://facebook.com/dwijhanuar" target="_blank" class="w-8 h-8 bg-slate-300 flex justify-center items-center rounded-full text-white group hover:bg-primary transition duration-300 mr-4">
+              <i class="text-lg fa-brands fa-facebook"></i>
+            </a>
+            
+            <a href="https://wa.me/6289660882061" target="_blank" class="w-8 h-8 bg-slate-300 flex justify-center items-center rounded-full text-white group hover:bg-green-500 transition duration-300 mr-4">
+              <i class="text-lg fa-brands fa-whatsapp"></i>
+            </a>
+            
+            <a href="https://instagram.com/dwijhanuar02" target="_blank" class="w-8 h-8 bg-slate-300 flex justify-center items-center rounded-full text-white group hover:bg-pink-500 transition duration-300 mr-4">
+              <i class="text-lg fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        <div class="mt-2 text-center">
+          <p class="text-xs font-medium mt-1 text-slate-500 lg:text-sm">@Copyright by <span class="text-primary">Dwi Jhanuar</span><span class="text-pink-500 ml-1">&#9829</span>, <a href="https://tailwindcss.com" target="_blank" class="text-primary underline hover:text-sky-600 transtion">Tailwind Css</a>.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+  
+  <!-- Back To Top Start -->
+  <a href="#home" class="w-10 h-10 hidden justify-center items-center fixed bottom-4 right-4 z-[9999] bg-primary rounded-full text-white hover:scale-110 transition duration-400 ease-in-out" id="back-top">
+    <i class="fa fa-arrow-up"></i>
+  </a>
+  <!-- Back To Top End -->
+  
+<script src="src/js/script.js"></script>
+</body>
+</html>
